@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student portfolio showcasing skills, education, and projects.">
+  <title>Student Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="#home">My Portfolio</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <p class="eyebrow">Welcome to My Portfolio</p>
+        <h1>Hello, I am Josha<span>Coursera Learner</span></h1>
+        <p class="hero-copy">I am interested in web development, programming and technology.</p>
+        <a class="button" href="#projects">View My Projects</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container narrow">
+        <h2>About Me</h2>
+        <p>I am a B.Sc. Information Technology student building my skills in programming and web development. I enjoy learning new technologies and creating useful, simple and attractive websites.</p>
+      </div>
+    </section>
+
+    <section class="soft-section" id="skills">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="card-grid skills-grid">
+          <article class="card">
+            <h3>HTML</h3>
+            <p>Creating structured and accessible web pages.</p>
+          </article>
+          <article class="card">
+            <h3>CSS</h3>
+            <p>Designing responsive and attractive interfaces.</p>
+          </article>
+          <article class="card">
+            <h3>JavaScript</h3>
+            <p>Adding interaction and dynamic features.</p>
+          </article>
+          <article class="card">
+            <h3>C++</h3>
+            <p>Understanding programming and object-oriented concepts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container narrow">
+        <h2>Education</h2>
+        <article class="education-card">
+          <h3>B.Sc. Information Technology</h3>
+          <p>Currently pursuing my undergraduate degree.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="soft-section" id="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="card-grid projects-grid">
+          <article class="card">
+            <h3>Student Portfolio</h3>
+            <p>A responsive personal portfolio created using HTML, CSS and JavaScript.</p>
+          </article>
+          <article class="card">
+            <h3>Web Development Project</h3>
+            <p>A practice project focused on page structure, styling and user interaction.</p>
+          </article>
+          <article class="card">
+            <h3>C++ Programs</h3>
+            <p>Collection of beginner programming programs and object-oriented concepts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form class="contact-form" id="contact-form">
+          <label class="sr-only" for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required>
+          <label class="sr-only" for="email">Your Email</label>
+          <input id="email" name="email" type="email" placeholder="Your Email" required>
+          <label class="sr-only" for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button class="button submit-button" type="submit">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Portfolio | Created for Web Development Assignment</p>
+  </footer>
+</body>
+</html>
