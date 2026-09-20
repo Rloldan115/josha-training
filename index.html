@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A student portfolio showcasing skills, education, and projects.">
-  <title>Student Portfolio</title>
+  <meta name="description" content="Josha's portfolio showcasing web development skills, education, and selected projects.">
+  <title>Josha | Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Primary navigation">
-      <a class="brand" href="#home">My Portfolio</a>
+      <a class="brand" href="#home" aria-label="Josha, home">
+        <span class="brand-mark">J</span>
+        <span>Josha.</span>
+      </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
         <span></span><span></span><span></span>
       </button>
@@ -19,8 +26,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -29,37 +36,70 @@
   <main>
     <section class="hero" id="home">
       <div class="container hero-content">
-        <p class="eyebrow">Welcome to My Portfolio</p>
-        <h1>Hello, I am Josha<span>Coursera Learner</span></h1>
-        <p class="hero-copy">I am interested in web development, programming and technology.</p>
-        <a class="button" href="#projects">View My Projects</a>
+        <div class="hero-copy-block">
+          <p class="availability"><span></span> Open to learning opportunities</p>
+          <p class="eyebrow">Web developer &amp; IT student</p>
+          <h1>Building thoughtful digital <em>experiences.</em></h1>
+          <p class="hero-copy">Hi, I am Josha. I turn ideas into responsive, accessible websites while growing my skills through hands-on projects and Coursera.</p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore my work <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+            <a class="text-link" href="#contact">Let's connect <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <dl class="hero-stats" aria-label="Portfolio highlights">
+            <div><dt>03</dt><dd>Projects</dd></div>
+            <div><dt>04</dt><dd>Core skills</dd></div>
+            <div><dt>100%</dt><dd>Curiosity</dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual" aria-label="Developer workspace">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Laptop showing code in a modern developer workspace">
+          <div class="visual-label"><span>Currently exploring</span><strong>Modern Web Development</strong></div>
+        </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container narrow">
-        <h2>About Me</h2>
-        <p>I am a B.Sc. Information Technology student building my skills in programming and web development. I enjoy learning new technologies and creating useful, simple and attractive websites.</p>
+    <section class="about-section" id="about">
+      <div class="container about-layout">
+        <div class="section-heading">
+          <p class="section-index">01 / About</p>
+          <h2>Curious by nature.<br>Focused by practice.</h2>
+        </div>
+        <div class="about-copy">
+          <p class="lead">I am a B.Sc. Information Technology student building my skills in programming and web development.</p>
+          <p>I enjoy learning new technologies and creating useful, simple and attractive websites. Every project is an opportunity to think clearly, write better code, and create something people can use with ease.</p>
+          <div class="about-values">
+            <span><i data-lucide="scan-line" aria-hidden="true"></i> Detail oriented</span>
+            <span><i data-lucide="users" aria-hidden="true"></i> User focused</span>
+            <span><i data-lucide="trending-up" aria-hidden="true"></i> Always learning</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="soft-section" id="skills">
+    <section class="skills-section" id="skills">
       <div class="container">
-        <h2>My Skills</h2>
+        <div class="section-heading row-heading">
+          <div><p class="section-index">02 / Capabilities</p><h2>Tools I build with.</h2></div>
+          <p>A focused toolkit for building reliable, responsive digital experiences.</p>
+        </div>
         <div class="card-grid skills-grid">
           <article class="card">
+            <span class="skill-number">01</span><i data-lucide="code-2" aria-hidden="true"></i>
             <h3>HTML</h3>
             <p>Creating structured and accessible web pages.</p>
           </article>
           <article class="card">
+            <span class="skill-number">02</span><i data-lucide="palette" aria-hidden="true"></i>
             <h3>CSS</h3>
             <p>Designing responsive and attractive interfaces.</p>
           </article>
           <article class="card">
+            <span class="skill-number">03</span><i data-lucide="braces" aria-hidden="true"></i>
             <h3>JavaScript</h3>
             <p>Adding interaction and dynamic features.</p>
           </article>
           <article class="card">
+            <span class="skill-number">04</span><i data-lucide="terminal-square" aria-hidden="true"></i>
             <h3>C++</h3>
             <p>Understanding programming and object-oriented concepts.</p>
           </article>
@@ -67,47 +107,59 @@
       </div>
     </section>
 
-    <section id="education">
-      <div class="container narrow">
-        <h2>Education</h2>
-        <article class="education-card">
-          <h3>B.Sc. Information Technology</h3>
-          <p>Currently pursuing my undergraduate degree.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="soft-section" id="projects">
+    <section class="projects-section" id="projects">
       <div class="container">
-        <h2>My Projects</h2>
+        <div class="section-heading row-heading">
+          <div><p class="section-index">03 / Selected work</p><h2>Projects in progress.</h2></div>
+          <p>Practice-led work focused on fundamentals, clarity, and useful interaction.</p>
+        </div>
         <div class="card-grid projects-grid">
-          <article class="card">
-            <h3>Student Portfolio</h3>
-            <p>A responsive personal portfolio created using HTML, CSS and JavaScript.</p>
+          <article class="project-card featured-project">
+            <div class="project-top"><span>Featured project</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
+            <div><p class="project-type">Web design &amp; development</p><h3>Student Portfolio</h3>
+            <p>A responsive personal portfolio created using HTML, CSS and JavaScript.</p></div>
+            <ul class="tag-list" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
           </article>
-          <article class="card">
-            <h3>Web Development Project</h3>
-            <p>A practice project focused on page structure, styling and user interaction.</p>
+          <article class="project-card">
+            <div class="project-top"><span>Practice project</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
+            <div><p class="project-type">Frontend development</p><h3>Web Development Project</h3>
+            <p>A practice project focused on page structure, styling and user interaction.</p></div>
+            <ul class="tag-list" aria-label="Technologies"><li>Responsive</li><li>UI Design</li></ul>
           </article>
-          <article class="card">
-            <h3>C++ Programs</h3>
-            <p>Collection of beginner programming programs and object-oriented concepts.</p>
+          <article class="project-card">
+            <div class="project-top"><span>Code collection</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></div>
+            <div><p class="project-type">Programming fundamentals</p><h3>C++ Programs</h3>
+            <p>Collection of beginner programming programs and object-oriented concepts.</p></div>
+            <ul class="tag-list" aria-label="Technologies"><li>C++</li><li>OOP</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
+    <section class="education-section" id="education">
+      <div class="container education-layout">
+        <div class="section-heading"><p class="section-index">04 / Education</p><h2>Learning with purpose.</h2></div>
+        <article class="education-card">
+          <div class="education-icon"><i data-lucide="graduation-cap" aria-hidden="true"></i></div>
+          <div><p class="education-status">Currently pursuing</p><h3>B.Sc. Information Technology</h3><p>Building a strong foundation in software, systems, and modern web technologies.</p></div>
+          <span class="education-year">Present</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="section-index">05 / Contact</p>
+          <h2>Have an idea?<br><em>Let's build it.</em></h2>
+          <p>I am always open to learning, collaborating, and discussing thoughtful digital projects.</p>
+          <p class="contact-email"><i data-lucide="message-circle" aria-hidden="true"></i> Available through the contact form</p>
+        </div>
         <form class="contact-form" id="contact-form">
-          <label class="sr-only" for="name">Your Name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required>
-          <label class="sr-only" for="email">Your Email</label>
-          <input id="email" name="email" type="email" placeholder="Your Email" required>
-          <label class="sr-only" for="message">Your Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
-          <button class="button submit-button" type="submit">Send Message</button>
+          <div class="form-row"><div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea></div>
+          <button class="button submit-button" type="submit">Send message <i data-lucide="send" aria-hidden="true"></i></button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -115,7 +167,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Student Portfolio | Created for Web Development Assignment</p>
+    <div class="container footer-content"><a class="brand" href="#home"><span class="brand-mark">J</span><span>Josha.</span></a><p>&copy; 2026 Josha. Designed and built with curiosity.</p><a class="back-to-top" href="#home" aria-label="Back to top"><i data-lucide="arrow-up" aria-hidden="true"></i></a></div>
   </footer>
 </body>
 </html>

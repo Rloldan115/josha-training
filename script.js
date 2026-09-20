@@ -2,6 +2,12 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const contactForm = document.querySelector('#contact-form');
 const formStatus = document.querySelector('.form-status');
+const siteHeader = document.querySelector('.site-header');
+const sections = document.querySelectorAll('main section[id]');
+
+if (window.lucide) {
+  window.lucide.createIcons();
+}
 
 menuToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
@@ -22,3 +28,23 @@ contactForm.addEventListener('submit', (event) => {
   formStatus.textContent = 'Thank you! Your message has been received.';
   contactForm.reset();
 });
+
+const updateNavigation = () => {
+  siteHeader.classList.toggle('scrolled', window.scrollY > 12);
+
+  let currentSection = 'home';
+  sections.forEach((section) => {
+    if (window.scrollY >= section.offsetTop - 160) {
+      currentSection = section.id;
+    }
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    const isCurrent = link.getAttribute('href') === `#${currentSection}`;
+    link.classList.toggle('active', isCurrent);
+    link.toggleAttribute('aria-current', isCurrent);
+  });
+};
+
+updateNavigation();
+window.addEventListener('scroll', updateNavigation, { passive: true });
