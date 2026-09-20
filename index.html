@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=3" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -52,10 +52,24 @@
             <div><dt>01</dt><dd>Learning journey</dd></div>
           </dl>
         </div>
-        <div class="hero-visual" data-tilt aria-label="Developer workspace">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Laptop showing code in a modern developer workspace">
-          <span class="visual-index" aria-hidden="true">01</span>
-          <div class="visual-label"><span>Current learning path</span><strong>Frontend Development on Coursera</strong></div>
+        <div class="hero-visual" data-tilt aria-label="Rotating gallery of frontend development workspaces">
+          <div class="orbit-ring" aria-hidden="true">
+            <figure class="orbit-item" style="--position: 0"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 1"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 2"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 3"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 4"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 5"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 6"><img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 7"><img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 8"><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+            <figure class="orbit-item" style="--position: 9"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt=""></figure>
+          </div>
+          <div class="orbit-center">
+            <span>Current path</span>
+            <strong>Frontend<br>Development</strong>
+            <i data-lucide="code-2" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </section>
